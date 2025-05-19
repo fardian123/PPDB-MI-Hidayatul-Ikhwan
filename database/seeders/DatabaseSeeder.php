@@ -16,17 +16,17 @@ class DatabaseSeeder extends Seeder
     {
         // User::factory(10)->create();
         User::create([
-            'name' => 'Admin',
-            'email' => 'admin@example.com',
-            'password' => bcrypt('admin@example.com'), // Password admin
+            'name' => 'fardian',
+            'email' => 'fardianzahri24@gmail.com',
+            'password' => bcrypt('kpunpam1234fardian'), // Password admin
             'role' => 'petugas',
             "is_verified"=>1,
         ]);
 
-        User::factory(30)->create()->each(function ($user) {
-            $user->pendaftaran()->save(Pendaftaran::factory()->make([
-                'user_id' => $user->id,
-            ]));
-        });
+        // User::factory(30)->create()->each(function ($user) {
+        //     $user->pendaftaran()->save(Pendaftaran::factory()->make([
+        //         'user_id' => $user->id,
+        //     ]));
+        // });
     }
 }

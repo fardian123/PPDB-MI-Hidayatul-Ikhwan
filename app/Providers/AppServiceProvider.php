@@ -5,6 +5,7 @@ namespace App\Providers;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Auth\Notifications\ResetPassword;
 use Illuminate\Notifications\Messages\MailMessage;
+use URL;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -35,5 +36,8 @@ class AppServiceProvider extends ServiceProvider
                 ->salutation('Salam hangat, Tim MI Hidayatul Ikhwan');
 
         });
+        if (env('APP_ENV') !== 'local') {
+            URL::forceScheme('https');
+        }
     }
 }
