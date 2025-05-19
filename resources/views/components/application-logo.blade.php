@@ -1,0 +1,1 @@
+<img src="{{asset('backend/assets/images/hidayatulikhwan-removebg-preview.png')}}" class="logo-icon" alt="logo icon">
