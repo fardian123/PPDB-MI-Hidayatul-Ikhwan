@@ -360,7 +360,7 @@
                 <!-- Carousel items -->
                 <div class="carousel-inner">
                     <div class="carousel-item active carousel-item-fixed-height">
-                       c
+                        <img src="{{asset('backend/assets/images/foto_madrasah/foto sekolah 2.jpg')}}"
                             class="d-block w-100" alt="...">
                         <div class="carousel-overlay"></div>
                         <div class="carousel-caption-custom">
