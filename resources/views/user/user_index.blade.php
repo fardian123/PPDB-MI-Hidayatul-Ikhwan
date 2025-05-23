@@ -26,16 +26,16 @@
                     <div class="card-header">Panitia PPDB </div>
                     <div class="card-body">
                         <ul class="list-unstyled">
-                            <li><i class="bx bxl-whatsapp"></i> 0812-3456-7890 | Panitia PPDB 1</li>
-                            <li><i class="bx bxl-whatsapp"></i> 0821-9876-5432 | Panitia PPDB 2</li>
-                            <li><i class="bx bxl-whatsapp"></i> 0857-1234-5678 | Panitia PPDB 3</li>
+                            <li><i class="bx bxl-whatsapp"></i> 0859-3517-8208 | Panitia PPDB 1</li>
+                            <li><i class="bx bxl-whatsapp"></i> 0815-2596-7778 | Panitia PPDB 2</li>
+                            
                         </ul>
-                        <hr>
+                        <!-- <hr>
                         <div class="text-center">
                             <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://www.youtube.com/watch?v=a3ICNMQW7Ok"
                                 alt="QR Code" class="img-fluid">
                             <p class="mt-2">Scan QR untuk panduan Pendaftaran</p>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>
