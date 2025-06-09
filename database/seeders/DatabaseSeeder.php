@@ -23,10 +23,10 @@ class DatabaseSeeder extends Seeder
             "is_verified"=>1,
         ]);
 
-        // User::factory(30)->create()->each(function ($user) {
-        //     $user->pendaftaran()->save(Pendaftaran::factory()->make([
-        //         'user_id' => $user->id,
-        //     ]));
-        // });
+        User::factory(30)->create()->each(function ($user) {
+            $user->pendaftaran()->save(Pendaftaran::factory()->make([
+                'user_id' => $user->id,
+            ]));
+        });
     }
 }

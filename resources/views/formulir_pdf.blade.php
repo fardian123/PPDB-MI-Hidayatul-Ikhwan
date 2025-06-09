@@ -77,9 +77,64 @@
             font-size: 12px;
         }
 
+        @page {
+            size: A4;
+            margin: 1cm;
+        }
 
-       
+        body {
+            font-family: Arial, sans-serif;
+            font-size: 10px;
+            /* Diperkecil */
+            margin: 0;
+            padding: 0;
+        }
+
+        table {
+            page-break-inside: avoid;
+        }
+
+        td.label {
+            width: 25%;
+        }
+
+        td.value {
+            width: 74%;
+        }
+
+        .kop-container {
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid black;
+            padding-bottom: 5px;
+            margin-bottom: 5px;
+        }
+
+        .logo {
+            width: 60px;
+            height: 60px;
+            margin-right: 10px;
+        }
+
+        .header-text {
+            text-align: center;
+            flex: 1;
+        }
+
+        h2,
+        h3,
+        h4 {
+            margin: 0;
+            font-size: 12px;
+        }
+
+        .alamat {
+            font-size: 9px;
+            font-style: italic;
+            margin-top: 2px;
+        }
     </style>
+
 </head>
 
 <body>
@@ -98,7 +153,7 @@
         </div>
     </div>
 
-    <br>
+
     <strong>KETERANGAN ANAK :</strong>
     <table>
         <tr>
@@ -112,6 +167,16 @@
             <td class="value">{{ $data->nisn ?: ' ' }}</td>
         </tr>
         <tr>
+            <td class="label">2. NIK</td>
+            <td class="colon">:</td>
+            <td class="value">{{ $data->nik ?: ' ' }}</td>
+        </tr>
+        <tr>
+            <td class="label">3. Kartu Keluarga</td>
+            <td class="colon">:</td>
+            <td class="value">{{ $data->nomor_kk ?: ' ' }}</td>
+        </tr>
+        <tr>
             <td class="label">3. Tempat / Tanggal Lahir</td>
             <td class="colon">:</td>
             <td class="value">{{ $data->tempat_lahir ?: ' ' }}, {{ $data->tanggal_lahir ?: ' ' }}</td>
@@ -121,6 +186,7 @@
             <td class="colon">:</td>
             <td class="value">{{ $data->jenis_kelamin ?: ' ' }}</td>
         </tr>
+
         <tr>
             <td class="label">5. Agama</td>
             <td class="colon">:</td>
@@ -195,6 +261,11 @@
             <td class="value">{{ $data->nama_ayah ?: ' ' }} / {{ $data->nama_ibu ?: ' ' }}</td>
         </tr>
         <tr>
+            <td class="label">17. NIK Ayah / Ibu</td>
+            <td class="colon">:</td>
+            <td class="value">{{ $data->nik_ayah ?: ' ' }} / {{ $data->nik_ibu ?: ' ' }}</td>
+        </tr>
+        <tr>
             <td class="label">18. Pendidikan Tertinggi Ayah / Ibu</td>
             <td class="colon">:</td>
             <td class="value">{{ $data->pendidikan_ayah ?: ' ' }} / {{ $data->pendidikan_ibu ?: ' ' }}</td>
@@ -208,7 +279,7 @@
 
     </table>
 
-    <br><strong>KETERANGAN Wali</strong>
+    <strong>KETERANGAN Wali</strong>
     <table>
         <tr>
             <td class="label">20. Nama Wali</td>
@@ -279,10 +350,19 @@
             </td>
 
             <!-- Kolom Tanda Tangan -->
-            <td style="width: 35%; text-align: right;">
+            <!-- Dua kolom tanda tangan -->
+            <td style="width: 35%; text-align: center;">
                 <div>
-                    Cisauk, {{ \Carbon\Carbon::now()->translatedFormat('d F Y') }}<br><br>
-                    Orang Tua / Wali Murid
+                    Cisauk, {{ \Carbon\Carbon::now()->translatedFormat('d F Y') }}<br>
+                    Orang Tua / Wali Murid<br><br><br><br><br>
+                    (.......................................)
+                </div>
+            </td>
+            <td style="width: 35%; text-align: center;">
+                <div>
+                    Cisauk, {{ \Carbon\Carbon::now()->translatedFormat('d F Y') }}<br>
+                    Panitia Pendaftaran<br><br><br><br><br>
+                    (.......................................)
                 </div>
             </td>
         </tr>

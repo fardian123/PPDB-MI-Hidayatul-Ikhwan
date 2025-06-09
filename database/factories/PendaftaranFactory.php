@@ -25,6 +25,8 @@ class PendaftaranFactory extends Factory
             'user_id' => User::factory(), // generate user baru sekalian kalau mau
             'nama_lengkap' => $this->faker->name(),
             'nisn' => $this->faker->numerify('##########'), // 10 digit random
+            'nik' => $this->faker->numerify('################'), // 16 digit random
+            'nomor_kk' => $this->faker->numerify('################'), // 16 digit random
             'tanggal_lahir' => $this->faker->date(),
             'tempat_lahir' => $this->faker->city(),
             'jenis_kelamin' => $this->faker->randomElement(['Laki-laki', 'Perempuan']),
@@ -43,6 +45,10 @@ class PendaftaranFactory extends Factory
             'tanggal_diterima' => $tanggalDiterima->format('Y-m-d'),
             'kelas_diterima' => $this->faker->randomElement(['1', '2', '3', '4', '5', '6']),
 
+            'nik_ibu' => $this->faker->numerify('################'), # 16 digit
+            'nik_ayah' => $this->faker->numerify('################'), # 16 digit
+            'status_ayah' => $this->faker->randomElement(['masih_hidup', 'sudah_tiada']),
+            'status_ibu' => $this->faker->randomElement(['masih_hidup', 'sudah_tiada']),
             'nama_ayah' => $this->faker->name('male'),
             'nama_ibu' => $this->faker->name('female'),
             'pendidikan_ayah' => $this->faker->randomElement(['SMP/Sederajat', 'SMA/Sederajat', 'S1 atau lebih']),

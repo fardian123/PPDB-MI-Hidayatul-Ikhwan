@@ -65,6 +65,7 @@ Route::middleware(['auth', 'otpVerified', 'role:petugas'])->group(function () {
     Route::get('/petugas/dashboard', [petugasController::class, 'petugasDashboard'] )->name('petugas.dashboard');
 
     Route::get('/petugas/master-peserta-didik', [petugasController::class, 'petugasMasterPesertaDidik'])->name('petugas.master_peserta_didik');
+    Route::get('/petugas/laporan', [petugasController::class, 'petugasLaporan'])->name('petugas.laporan');
 
 
 
@@ -78,6 +79,10 @@ Route::middleware(['auth', 'otpVerified', 'role:petugas'])->group(function () {
     Route::post('/petugas/pendaftaran/hapus/', [PetugasController::class, 'petugasHapusPendaftaran'])->name('petugas.hapus.pendaftaran');
     
     Route::post('/petugas/pendaftaran/store', [petugasController::class, 'petugasStore'])->name('petugas.store.pendaftaran');
+    Route::get('/petugas/pendaftaran/{id}/download', [PetugasController::class, 'petugasDownloadFormulir'])->name('petugas.download.formulir');
+    
+    Route::get('/petugas/pendaftaran/download-rekap', [PetugasController::class, 'petugasDownloadRekapan'])->name('petugas.download.rekap');
+
     
 
 

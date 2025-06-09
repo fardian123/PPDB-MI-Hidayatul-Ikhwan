@@ -18,6 +18,8 @@ return new class extends Migration {
             // Data Anak
             $table->string('nama_lengkap');
             $table->string('nisn');
+            $table->string('nomor_kk');
+            $table->string('nik');
             $table->date('tanggal_lahir');
             $table->string("tempat_lahir");
             $table->enum('jenis_kelamin', ['Laki-laki', 'Perempuan']);
@@ -38,6 +40,10 @@ return new class extends Migration {
             $table->string('kelas_diterima')->nullable();
 
             // Data Orang Tua 
+            $table->string('nik_ibu');
+            $table->string('nik_ayah');
+            $table->enum('status_ayah', ['masih_hidup', 'sudah_tiada']);
+            $table->enum('status_ibu', ['masih_hidup', 'sudah_tiada']);
             $table->string('nama_ayah');
             $table->string('nama_ibu');
             $table->string('pendidikan_ayah');
@@ -46,13 +52,13 @@ return new class extends Migration {
             $table->string('pekerjaan_ibu');
 
             //  Data Wali
-            $table->string('nama_wali');
-            $table->string('pendidikan_wali');
-            $table->string('hubungan_wali');
-            $table->string('pekerjaan_wali');
-            $table->string('telepon_wali');
-            $table->string('kewarganegaraan');
-            $table->string('alamat_wali');
+            $table->string('nama_wali')->default("-");
+            $table->string('pendidikan_wali')->default("-");
+            $table->string('hubungan_wali')->default("-");
+            $table->string('pekerjaan_wali')->default("-");
+            $table->string('telepon_wali')->default("-");
+            $table->string('kewarganegaraan')->default("-");
+            $table->string('alamat_wali')->default("-");
 
 
             // KIP/KKS/KIS
@@ -60,7 +66,7 @@ return new class extends Migration {
             $table->string('KIS')->nullable()->default('0');
             $table->string('KKS')->nullable()->default('0');
 
-            $table->enum('status_pendaftaran', ['valid', 'pending','tidak_valid'])->default("pending");
+            $table->enum('status_pendaftaran', ['valid', 'pending', 'tidak_valid'])->default("pending");
 
             $table->timestamps();
         });

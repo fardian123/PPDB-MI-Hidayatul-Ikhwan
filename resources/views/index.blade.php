@@ -365,7 +365,8 @@
                         <div class="carousel-overlay"></div>
                         <div class="carousel-caption-custom">
                             <h2>Membangun Generasi Unggul dari Lingkungan Madrasah</h2>
-                            <p>Lingkungan belajar yang nyaman dan inspiratif untuk mencetak generasi cerdas dan berakhlak.</p>
+                            <p>Lingkungan belajar yang nyaman dan inspiratif untuk mencetak generasi cerdas dan
+                                berakhlak.</p>
                         </div>
                     </div>
                     <div class="carousel-item carousel-item-fixed-height">
@@ -610,13 +611,14 @@
                         Kec. Cisauk.
                         Kab. Tangerang, Banten.
                     </p>
-                   
+
                     <p class="nunito footer-text"><i class='bx bx-phone'></i> (+62) 8129-0210-878</p>
                     <p class="nunito footer-text"><i class='bx bxl-whatsapp'></i> (+62) 8129-0210-878</p>
 
                     <!-- Ikon Media Sosial -->
 
-                    <a href="https://www.instagram.com/mis_hidayatul_ikhwan/" class="social-icon">
+                    <a href="https://www.instagram.com/mishidayatulikhwan?igsh=Zm83MzkxdHRjem04" class="social-icon"
+                        target="_blank" rel="noopener noreferrer">
                         <i class='bx bxl-instagram-alt bx-md'></i>
                     </a>
                     <a href="#" class="social-icon">

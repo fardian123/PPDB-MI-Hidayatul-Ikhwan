@@ -11,6 +11,8 @@ class Pendaftaran extends Model
 
     protected $fillable = [
         'user_id',
+        'nik',
+        'nomor_kk',
         'nama_lengkap',
         'nisn',
         'tanggal_lahir',
@@ -29,6 +31,10 @@ class Pendaftaran extends Model
         'lama_belajar',
         'tanggal_diterima',
         'kelas_diterima',
+        'nik_ibu',
+        'nik_ayah',
+        'status_ayah',
+        'status_ibu',
         'nama_ayah',
         'nama_ibu',
         'pendidikan_ayah',

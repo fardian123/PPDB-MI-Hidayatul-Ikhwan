@@ -29,6 +29,14 @@
 				<div class="menu-title">Data Master Pendaftar</div>
 			</a>
 		</li>
+
+		<li>
+			<a href="{{route('petugas.laporan') }}">
+				<div class="parent-icon"><i class='bx bx-detail'></i>
+				</div>
+				<div class="menu-title">Laporan</div>
+			</a>
+		</li>
 		
 
 		
